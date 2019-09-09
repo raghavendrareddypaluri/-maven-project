@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'mvn package'
+                bat label: '', script: 'mvn package'
             }
         }
         stage('Deploy') {
